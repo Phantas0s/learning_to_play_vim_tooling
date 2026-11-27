@@ -1,0 +1,25 @@
+% Set the `style=tango` attribute for all minted blocks.  Can still be overriden
+% per block (e.g., you want to change just one).  Run `pygmentize -L` to see
+% all available options.
+\usemintedstyle{manni}
+
+% \BeforeBeginEnvironment{minted}{\begin{tcolorbox}[colback=cverbbg,boxrule=0.225mm,boxsep=0mm,left=4mm,top=3mm,bottom=3mm,middle=3mm]}%
+
+\BeforeBeginEnvironment{minted}{ 
+    \begin{tcolorbox}[
+    colback=cverbbg,
+    colframe=cverbframe,
+    boxrule=0.225mm,
+    boxsep=0mm,
+    left=3mm,
+    right=2mm,
+    top=2mm,
+    bottom=2mm,
+    before skip=8pt,
+    after skip=8pt,
+    breakable,
+    enhanced jigsaw,
+  ]
+}
+\AfterEndEnvironment{minted}{\end{tcolorbox}}
+

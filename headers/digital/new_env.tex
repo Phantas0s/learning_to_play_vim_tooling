@@ -1,0 +1,42 @@
+\usepackage{fontawesome5}
+
+\definecolor{envborder}{HTML}{CCCCCC}
+
+\newtcolorbox{playtime}{
+  enhanced,
+  colback=white,
+  frame hidden,
+  borderline west={2pt}{0pt}{envborder},
+  left=4pt,
+  right=10pt,
+  top=2pt,
+  bottom=4pt,
+  arc=0pt,
+  before upper={%
+    \Large\sffamily\textbf{It's Playtime!}\par\normalfont\normalsize
+    \titleformat{\subsection}{\normalsize\Large\bfseries\sffamily}{}{0em}{}%
+  },
+  left skip=40pt,
+  enlarge bottom by=5pt,
+  overlay={
+    \node[anchor=east, inner sep=0pt, yshift=-5mm] at ([xshift=-10pt]frame.north west) {\Huge\faKeyboard};
+  }
+}
+
+\newtcolorbox{helpblock}{
+  enhanced,
+  colback=white,
+  frame hidden,
+  borderline west={2pt}{0pt}{envborder},
+  left=4pt,
+  right=10pt,
+  top=4pt,
+  bottom=4pt,
+  arc=0pt,
+  before upper={\normalsize\sffamily\textbf{Help Yourself}\par\vspace{8pt}\normalfont\normalsize},
+  left skip=40pt,
+  enlarge bottom by=5pt,
+  overlay={
+    \node[anchor=east, inner sep=0pt, yshift=-5mm] at ([xshift=-10pt]frame.north west) {\Huge\faQuestionCircle};
+  }
+}

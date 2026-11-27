@@ -1,0 +1,19 @@
+\usepackage{footnote}
+% For awesomebox not to swallow the footnotes
+\makesavenoteenv{tabular}
+% Allow footnotes in tables
+\makesavenoteenv{longtable}
+
+% To get the name of the section's label
+\usepackage[hang,perpage,flushmargin,bottom,multiple]{footmisc}
+\setlength{\footnotemargin}{0.8em} % set space between footnote nr and text
+\setlength{\footnotesep}{\baselineskip} % set space between multiple footnotes
+\setlength{\skip\footins}{0.3cm} % set space between page content and footnote
+\setlength{\footskip}{0.9cm} % set space between footnote and page bottom
+% \setlength{\dimen\footins}{100cm} % set the maximum size of footnote area
+
+% Clickable links in PDFs
+\usepackage{hyperref}
+
+% Footnotes using arabic numbers instead of letter
+\renewcommand{\thempfootnote}{\arabic{mpfootnote}}

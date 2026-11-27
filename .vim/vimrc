@@ -1,0 +1,29 @@
+command! P execute 'w | Make chapter='.expand('%').' chapter.{pdf,epub} chapter-print.pdf'
+command! Pp execute 'w | Make chapter='.expand('%').' chapter-print.pdf'
+command! Ppp execute 'w | Make chapter='.expand('%').' chapter.{pdf,epub}'
+
+nnoremap <leader>w :w<cr>
+
+nnoremap <leader>e <cmd>execute "edit exercises/book/" .. substitute(expand('%:t:r'), '\v^\d*_', '', '') .. "_sol.md"<cr>
+
+" Useful for writing the book Learning to Play Vim
+
+" Create a cursor for minted codeblocks and inline code
+iabbrev cur_ ж\cur{}ж<left><left><c-r>=Delchar('\s')<cr>
+
+" Create a cursor for minted Bash code
+iabbrev bcur_ ж※{cur}{}ж<left><left><c-r>=Delchar('\s')<cr>
+
+" Create a highlight for minted codeblocks
+iabbrev high_ ж\high{}ж<left><left><c-r>=Delchar('\s')<cr>
+
+" Create a mnemonic
+iabbrev mne_ []{.mne}<esc>F[a<c-r>=Delchar('\s')<cr>
+" Create smallcaps
+iabbrev sc_ []{.smallcaps}<esc>F[a<c-r>=Delchar('\s')<cr>
+iabbrev ind_ []{.index}<esc>F[a<c-r>=Delchar('\s')<cr>
+iabbrev opt_ []{.opt}<esc>F[a<c-r>=Delchar('\s')<cr>
+
+iabbrev space_  
+
+let g:UltiSnipsSnippetDirectories=["UltiSnips", expand("%") . "/UltiSnips"]

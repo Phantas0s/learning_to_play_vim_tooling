@@ -1,0 +1,27 @@
+% Documentation: https://ftp.gwdg.de/pub/ctan/macros/latex/contrib/minted/minted.pdf
+\usepackage{tcolorbox}
+\usepackage{etoolbox}
+\tcbuselibrary{skins,breakable,minted}
+
+% \definecolor{cverbbg}{HTML}{F7FAFB}
+\definecolor{cverbbg}{HTML}{F3F9FB}
+\definecolor{cverbframe}{HTML}{C8E4ED} 
+
+% Depending on which pygments style you choose, comments and preprocessor
+% directives may be italic.  The `tango` style is one of these.  This disables
+% all italics in the `minted` environment.
+\AtBeginEnvironment{minted}{\let\itshape\relax}
+
+% This disables italics for the `\mintinline` commands.
+% Credit: https://tex.stackexchange.com/a/469702/113687
+\usepackage{xpatch}
+\xpatchcmd{\mintinline}{\begingroup}{\begingroup\let\itshape\relax}{}{}
+
+% See mdframed for a more precise frame around codeblock: https://ftp.rrze.uni-erlangen.de/ctan/macros/latex/contrib/mdframed/mdframed.pdf
+
+
+% References
+% https://ftp.tu-chemnitz.de/pub/tex/macros/latex/contrib/minted/minted.pdf
+% https://ctan.math.washington.edu/tex-archive/macros/latex/contrib/tcolorbox/tcolorbox.pdf
+
+

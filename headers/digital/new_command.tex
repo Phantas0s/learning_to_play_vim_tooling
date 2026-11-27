@@ -1,0 +1,7 @@
+% For Bash, use ж※{cur}{my-cursor}ж instead 
+% See https://tex.stackexchange.com/questions/715266/how-can-i-use-escapeinside-within-a-minted-environment-with-the-bash-lexer
+
+% Create a Vim cursor
+% Use ж\cur{my-cursor}ж
+\newcommand{\cur}[1]{\colorbox{black}{\makebox[0pt]{\rule[-0.1ex]{0pt}{1ex}\textcolor{white}{\textbf{#1}}}}}
+

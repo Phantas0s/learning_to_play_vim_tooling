@@ -1,0 +1,19 @@
+% \BeforeBeginEnvironment{minted}{\begin{tcolorbox}[colback=cverbbg,boxrule=0.225mm,boxsep=0mm,left=4mm,top=3mm,bottom=3mm,middle=3mm]}%
+
+\BeforeBeginEnvironment{minted}{ 
+    \begin{tcolorbox}[
+    colback=cverbbg,
+    colframe=cverbframe,
+    boxrule=0.225mm,
+    boxsep=0mm,
+    left=2mm,
+    right=1mm,
+    top=1mm,
+    bottom=1mm,
+    before skip=4pt,
+    after skip=6pt,
+    breakable,
+    enhanced jigsaw,
+  ]
+}
+\AfterEndEnvironment{minted}{\end{tcolorbox}}
